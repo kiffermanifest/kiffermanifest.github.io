@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0">
+    <title>Kiffermanifest</title>
+    <style>
+        body {
+            background-color: #c15236;
+            font-family: 'Arial';
+            padding: 2em 6em;
+        }
+        h1 {
+            color: #fff;
+            text-align: center;
+        }
+        .acc-kontainer {
+            width: 100%;
+            margin: auto;
+        }
+        .acc-kontainer .acc-body {
+            width: 98%;
+            width: calc(100% - 20px);
+            margin: 0 auto;
+            height: 0;
+            color: rgba(0, 0, 0, 0);
+            background-color: rgba(255, 255, 255, 0.2);
+            line-height: 28px;
+            padding: 0 20px;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+        .acc-kontainer label {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: block;
+            padding: 15px;
+            width: 100%;
+            color: #fff;
+            font-weight: 400;
+            box-sizing: border-box;
+            z-index: 100;
+        }
+        .acc-kontainer input {
+            display: none;
+        }
+        .acc-kontainer label:before {
+            font-family: 'FontAwesome';
+            content: '‒';
+            font-weight: bolder;
+            float: right;
+        }
+        .acc-kontainer input:checked+label {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        .acc-kontainer input:checked+label:before {
+            font-family: 'FontAwesome';
+            content: '+';
+            transition: 0.5s;
+        }
+        .acc-kontainer input:checked~.acc-body {
+            height: auto;
+            color: #fff;
+            font-size: 16px;
+            padding: 20px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kiffermanifest</h1>
+    <div class="acc-kontainer">
+        <div>
+            <input type="radio" name="acc" id="acc1" checked>
+            <label for="acc1"><b>Art. 1</b> Wer baut der haut.</label>
+            <div class="acc-body">
+                Diejenige Person welche den größten Anteil an der Produktion des zu rauchenen Objekts hat,
+                darf über den ersten Konsumierenden des Objekts entscheiden.
+            </div>
+        </div>
+        <div>
+            <input type="radio" name="acc" id="acc2">
+            <label for="acc2"><b>Art. 2</b> Wer stellt erhällt als zweites.</label>
+            <div class="acc-body">
+                Text 2.1
+            </div>
+        </div>
+        <div>
+            <input type="radio" name="acc" id="acc3">
+            <label for="acc3"><b>Art. 3</b> Gelobt sei die Tüte.</label>
+            <div class="acc-body">
+                Text 3.1
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
